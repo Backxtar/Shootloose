@@ -14,6 +14,21 @@ public class EmbedHelper {
                 .setFooter(getRandomTip(), "http://i.epvpimg.com/lHmUcab.png");
     }
 
+    public static EmbedBuilder getBuilder(String avatar, String title, String desc) {
+        return new EmbedBuilder()
+                .setTitle(title)
+                .setThumbnail(avatar)
+                .setDescription(desc)
+                .setFooter(getRandomTip(), "http://i.epvpimg.com/lHmUcab.png");
+    }
+
+    public static EmbedBuilder getBuilder(String title, String desc) {
+        return new EmbedBuilder()
+                .setTitle(title)
+                .setDescription(desc)
+                .setFooter(getRandomTip(), "http://i.epvpimg.com/lHmUcab.png");
+    }
+
     private static String getRandomTip() {
         String[] values = {"If you dont want to share your data with others you can write me a private message.", "Type: kg!help to get a list of all commands.", "Always use a valid GW2 API-Key!"};
         Random random = new Random();

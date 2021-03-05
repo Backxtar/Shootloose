@@ -1,4 +1,4 @@
-package de.shootloose.commands;
+package de.shootloose.commands.vote;
 
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import de.shootloose.interfaces.CommandInterface;

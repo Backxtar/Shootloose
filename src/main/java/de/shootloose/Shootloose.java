@@ -5,6 +5,7 @@ import com.github.instagram4j.instagram4j.exceptions.IGLoginException;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import de.shootloose.interfaces.CommandListener;
 import de.shootloose.interfaces.CommandRegister;
+import de.shootloose.interfaces.EventDistributor;
 import de.shootloose.utils.SQLHelper;
 import de.shootloose.utils.STATICS;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -62,6 +63,7 @@ public class Shootloose {
                 .setShardsTotal(-1)
 
                 .addEventListeners(new CommandListener())
+                .addEventListeners(new EventDistributor())
                 .addEventListeners(this.waiter);
         shardManager = shardManagerBuilder.build();
 
