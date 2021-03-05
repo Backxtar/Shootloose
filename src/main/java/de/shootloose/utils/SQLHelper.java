@@ -11,13 +11,13 @@ public class SQLHelper {
 
         try {
             Class.forName(jdbcDriver);
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kittyGolem_", "KittyGolem", "g01h~h7D");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost", "Zensiert", "zensiert");
             System.out.println(STATICS.getConsole()[5]);
 
         } catch (Exception e1) {
             try {
                 Class.forName(jdbcDriver);
-                conn = DriverManager.getConnection("jdbc:mysql://angrybee.online:3306/kittyGolem_", "KittyGolem", "g01h~h7D");
+                conn = DriverManager.getConnection("jdbc:mysql://url", "Zensiert", "zensiert");
                 System.out.println("SUCCESSFULLY CONNECTED TO DATABASE!");
 
             } catch (Exception e) {
