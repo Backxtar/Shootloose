@@ -27,7 +27,7 @@
             <!-- https://github.com/DV8FromTheWorld/JDA -->
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
-            <version>4.2.0_223</version>
+            <version>4.2.0_231</version>
         </dependency>
         <dependency>
             <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
