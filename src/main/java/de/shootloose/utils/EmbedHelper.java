@@ -14,17 +14,16 @@ public class EmbedHelper {
                 .setFooter(getRandomTip(), "http://i.epvpimg.com/lHmUcab.png");
     }
 
-    public static EmbedBuilder getBuilder(String avatar, String title, String desc) {
+    public static EmbedBuilder getBuilder(String url, String title, String desc) {
         return new EmbedBuilder()
+                .setThumbnail(url)
                 .setTitle(title)
-                .setThumbnail(avatar)
                 .setDescription(desc)
                 .setFooter(getRandomTip(), "http://i.epvpimg.com/lHmUcab.png");
     }
 
-    public static EmbedBuilder getBuilder(String title, String desc) {
+    public static EmbedBuilder getBuilder(String desc) {
         return new EmbedBuilder()
-                .setTitle(title)
                 .setDescription(desc)
                 .setFooter(getRandomTip(), "http://i.epvpimg.com/lHmUcab.png");
     }
