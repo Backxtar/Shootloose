@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class STATICS {
     private static final String[] console = {"BOT IST STARTING...", "BOT HAS SUCCESSFULLY STARTED!", "BOT IS SHUTTING DOWN...", "BOT IS OFFLINE.", "USE 'shutdown' TO SHUTDOWN!", "SUCCESSFULLY CONNECTED TO DATABASE!", "CAN'T CONNECT TO DATABASE!", "SUCCESSFULLY DISCONNECTED FROM DATABASE!", "ERROR WHILE DISCONNECTING FROM DATABASE!"};
-    private static ArrayList<String> activities = new ArrayList<>(Arrays.asList("Love Backxtar#0001", "https://www.instagram.com/raffa.oure/"));
+    private static final ArrayList<String> activities = new ArrayList<>(Arrays.asList("Version: 1.0", "Check out: backxtar_official", "Check out: raffa.oure"));
 
     //InstagramUsername InstagramPassword BotToken
     private static final String[] login = {"", "", ""};
