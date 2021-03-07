@@ -148,12 +148,12 @@ public class SQLHelper {
         long activeLong = isActive ? 1 : 0;
 
         try {
-            PreparedStatement preparedStatement = prepareStatement(
-                    "UPDATE activeSystems SET isActive= ? WHERE guildID= ? AND system= ?");
-            preparedStatement.setLong(1, activeLong);
-            preparedStatement.setLong(2, guildID);
-            preparedStatement.setString(3, system);
-            preparedStatement.execute();
+            PreparedStatement stmt;
+            stmt = prepareStatement("UPDATE activeSystems SET isActive= ? WHERE guildID= ? AND system= ?");
+            stmt.setLong(1, activeLong);
+            stmt.setLong(2, guildID);
+            stmt.setString(3, system);
+            stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -163,13 +163,13 @@ public class SQLHelper {
         long isActive = 2;
 
         try {
-            PreparedStatement preparedStatement = prepareStatement(
-                    "SELECT isActive FROM activeSystems WHERE guildID= ? AND system= ?");
-            preparedStatement.setLong(1, guildID);
-            preparedStatement.setString(2, system);
-            preparedStatement.execute();
+            PreparedStatement stmt;
+            stmt = prepareStatement("SELECT isActive FROM activeSystems WHERE guildID= ? AND system= ?");
+            stmt.setLong(1, guildID);
+            stmt.setString(2, system);
+            stmt.execute();
 
-            ResultSet resultSet = preparedStatement.executeQuery();
+            ResultSet resultSet = stmt.executeQuery();
 
             resultSet.next();
             isActive = resultSet.getLong("isActive");
@@ -183,15 +183,14 @@ public class SQLHelper {
         long activeLong = isActive ? 1 : 0;
 
         try {
-            PreparedStatement preparedStatement = prepareStatement(
-                    "INSERT INTO activeSystems(guildID, system, isActive) VALUES(?, ?, ?)");
-            preparedStatement.setLong(1, guildID);
-            preparedStatement.setString(2, system);
-            preparedStatement.setLong(3, activeLong);
-            preparedStatement.execute();
+            PreparedStatement stmt;
+            stmt = prepareStatement("INSERT INTO activeSystems(guildID, system, isActive) VALUES(?, ?, ?)");
+            stmt.setLong(1, guildID);
+            stmt.setString(2, system);
+            stmt.setLong(3, activeLong);
+            stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 }
